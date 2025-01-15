@@ -1,5 +1,2 @@
-print("Hello world")
-x = 1 + 2
-print(x)
-print(float(x/2))
-#teste
+nome_completo = input("Escreva o seu nome")
+print(nome_completo)
