@@ -44,3 +44,10 @@ cursor.execute("UPDATE funcionarios SET salario = 3000.00 WHERE nome = 'Pedro Sa
 conn.commit()
 conn.close()
 
+conn = sqlite3.connect('empresa.db')
+cursor = conn.cursor()
+
+cursor.execute("DELETE FROM funcionarios WHERE nome = 'Mariana Costa'")
+
+conn.commit()
+conn.close()
