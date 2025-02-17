@@ -10,7 +10,7 @@ cursor = conn.cursor()
         cargo TEXT NOT NULL,
         salario REAL NOT NULL
      )
-""") '''
+""")'''
 
 conn.commit()
 conn.close()
@@ -24,3 +24,23 @@ cursor.execute("INSERT INTO funcionarios (nome, cargo, salario) VALUES ('Mariana
 
 conn.commit()
 conn.close()
+
+conn = sqlite3.connect('empresa.db')
+cursor = conn.cursor()
+
+cursor.execute("SELECT * FROM funcionarios")
+funcionarios = cursor.fetchall()
+
+for funcionario in funcionarios:
+    print(funcionario)
+
+conn.close()
+
+conn = sqlite3.connect('empresa.db')
+cursor = conn.cursor()
+
+cursor.execute("UPDATE funcionarios SET salario = 3000.00 WHERE nome = 'Pedro Santos'")
+
+conn.commit()
+conn.close()
+
