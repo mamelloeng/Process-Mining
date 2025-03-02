@@ -31,4 +31,12 @@ np.random.seed(42)
 array1 = np.random.uniform(0,10,(5,3))
 print(array1)
 print(array1[0,0])
+print(array1[0,:])
+print(array1[0,0:2])
 
+ones1 = np.ones((3,5))
+random1 = np.random.rand(3,5)
+matrix = ones1 - random1
+print(matrix)
+print(np.mean(matrix))
+print(matrix.T)
