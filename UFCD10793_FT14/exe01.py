@@ -23,3 +23,12 @@ print(np.zeros((5,4)))
 
 obj1 = np.arange(0,101,3)
 print(obj1)
+
+print(np.random.randint(10, size=(7,2)))
+print(np.random.rand(5, 3))
+
+np.random.seed(42)
+array1 = np.random.uniform(0,10,(5,3))
+print(array1)
+print(array1[0,0])
+
