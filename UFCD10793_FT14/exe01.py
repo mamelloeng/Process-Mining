@@ -20,3 +20,6 @@ print("Tipo da matrix matrix: ",type(matrix))
 
 print(np.ones((10,2)))
 print(np.zeros((5,4)))
+
+obj1 = np.arange(0,101,2)
+print(obj1)
