@@ -74,3 +74,12 @@ print(t.groupby(['year']).size().head())
 gbmultiplecolumns = cf.groupby(['year','title']).size()
 print(gbmultiplecolumns.head())
 
+release = pd.read_csv('release_dates.csv', index_col=None)
+print(release.head(),'\n')
+
+
+c_amelia = casts[ casts['title'] == 'Amelia']
+print(c_amelia.head(),'\n')
+print(release [ release['title'] == 'Amelia'].head())
+
+print(c_amelia.merge(release).head())
