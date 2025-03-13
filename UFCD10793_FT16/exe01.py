@@ -39,3 +39,11 @@ t = titles
 movies90 = t[(t['year']>=1990) & (t['year']<2000)]
 print(movies90.head())
 
+macbeth = t[t['title'] == 'Macbeth'].sort_index()
+print(macbeth.head())
+
+macbeth = t[t['title'] == 'Macbeth'].sort_values('year')
+print(macbeth.head())
+
+print(casts.loc[3:4])
+
