@@ -26,4 +26,16 @@ print(type(t))
 
 tamanhocasts=len(casts)
 print(tamanhocasts)
+
 casts.info()
+
+print(titles.iloc[0])
+
+after85 = titles[titles['year'] > 1985]
+print(after85.head())
+
+t = titles
+
+movies90 = t[(t['year']>=1990) & (t['year']<2000)]
+print(movies90.head())
+
