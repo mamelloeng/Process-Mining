@@ -45,5 +45,32 @@ print(macbeth.head())
 macbeth = t[t['title'] == 'Macbeth'].sort_values('year')
 print(macbeth.head())
 
-print(casts.loc[3:4])
+print(casts.loc[3:4],'\n')
+
+c = casts
+
+print(c['n'].isnull().head())
+
+print(c[c['n'].isnull()].head(3),'\n')
+
+c_fill = c[c['n'].isnull()].fillna('NA')
+print(c_fill.head(2))
+
+t = titles
+
+print(t[t['title'] == 'Maa'],'\n')
+
+print(t[t['title'].str.startswith("Maa ")].head(3),'\n')
+
+print(t['year'].value_counts().head())
+
+c = casts
+
+cf = c[c['name'] == 'Aaron Abrams']
+
+print(cf.groupby(['year']).size().head())
+print(t.groupby(['year']).size().head())
+
+gbmultiplecolumns = cf.groupby(['year','title']).size()
+print(gbmultiplecolumns.head())
 
