@@ -23,3 +23,7 @@ print(titles.head(3))
 t = titles['title']
 
 print(type(t))
+
+tamanhocasts=len(casts)
+print(tamanhocasts)
+casts.info()
